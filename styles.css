@@ -1,0 +1,380 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body 
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(59, 70, 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-mode-2 
+{
+    background-color: rgb(230, 230, 230);
+}
+
+#calculator 
+{
+    width: 300px;
+    height: 400px;      
+}
+
+#top-bar 
+{
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(59, 70, 100);;
+}
+
+h1
+{
+    color: white;
+    margin-top: 8px;
+}
+.theme 
+{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+h6
+{
+    color: white;
+    align-self: center;
+    margin-top: -1px;
+    margin-right: 20px;
+} 
+
+.theme-numbers 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+span 
+{
+    color: white
+}
+
+.theme-btn
+{
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    width: 50px;
+    height: 20px;
+    background-color: rgb(24, 31, 50);
+    display: flex;
+    align-items: center;
+}
+
+.theme-btn::before
+{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: block;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.theme-btn.theme-mode-2::before
+{
+    transform: translateX(19px);
+    background-color: rgb(248, 139, 57)
+}
+
+.theme-btn.theme-mode-3::before
+{
+    transform: translateX(38px);
+    background-color: rgb(153, 255, 253)
+}
+
+#display 
+{
+    margin: 10px 0;
+    height: 20%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(24, 31, 50);
+    display: flex;
+    justify-content: center;
+}
+
+#display-value 
+{
+    width: 244px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#result-value-style 
+{
+    width: 244px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buttons
+{
+    border-radius: 5px;
+    height: 65%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(24, 31, 50);
+}
+
+.numbers-group
+{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn 
+{
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(240, 240, 240);
+    height: 35px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.2s ease-in;
+}
+
+.btn-mode-2 
+{
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 5px;
+    height: 35px;
+    width: 50px;
+    background-color: rgb(229, 228, 224);
+    transition: background 0.2s ease-in;
+}
+
+.btn-mode-3 
+{
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(255, 230, 62);
+    height: 35px;
+    width: 50px;
+    border: none;
+    border-bottom: 2px solid rgb(134, 49, 176);
+    border-radius: 5px;
+    background-color: rgb(51, 27, 77);
+    transition: background 0.2s ease-in;
+}
+
+.btn:hover 
+{
+    background-color: rgb(210, 210, 210);
+}
+
+.btn-mode-2:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-mode-3:hover{
+    background-color: rgb(107, 52, 172);
+}
+
+.del
+{
+    cursor: pointer;
+    font-weight: bold;
+    height: 35px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(111, 124, 159);
+    color: white;
+    transition: background 0.2s ease-in;
+}
+
+.del-mode-2
+{
+    cursor: pointer;
+    font-weight: bold;
+    height: 35px;
+    width: 50px;
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 5px;
+    background-color: rgb(98, 181, 189);
+    color: white;
+    transition: background 0.2s ease-in;
+}
+
+.del-mode-3
+{
+    cursor: pointer;
+    font-weight: bold;
+    height: 35px;
+    width: 50px;
+    border: none;
+    border-bottom: 2px solid rgb(134, 49, 176);
+    border-radius: 5px;
+    background-color: rgb(134, 49, 176);
+    color: white;
+    transition: background 0.2s ease-in;
+}
+
+.del:hover
+{
+    background-color: rgb(97, 111, 146);
+}
+
+.del-mode-2:hover
+{
+    background-color: rgb(58, 181, 189);
+}
+
+.del-mode-3:hover
+{
+    background-color: rgb(114, 49, 176);
+}
+
+.reset
+{
+    width: 115px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; 
+    height: 35px;
+    background-color: rgb(111, 124, 159);
+    color: white;
+    transition: background 0.2s ease-in;
+}
+
+.reset-mode-2
+{
+    width: 115px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 5px; 
+    height: 35px;
+    background-color: rgb(98, 181, 189);
+    color: white;
+    transition: background 0.2s ease-in;
+}
+
+.reset-mode-3
+{
+    width: 115px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid rgb(134, 49, 176);
+    border-radius: 5px; 
+    height: 35px;
+    background-color: rgb(134, 49, 176);
+    color: white;
+    transition: background 0.2s ease-in;
+}
+
+.reset:hover
+{
+    background-color: rgb(97, 111, 146);
+}
+
+.reset-mode-2:hover
+{
+    background-color: rgb(58, 181, 189);
+}
+
+.reset-mode-3:hover
+{
+    background-color: rgb(114, 49, 176);
+}
+
+.equal 
+{
+    width: 115px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; 
+    height: 35px;
+    color: white;
+    background-color: red;
+    transition: background 0.2s ease-in;
+}
+
+.equal-mode-2
+{
+    width: 115px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 5px; 
+    height: 35px;
+    color: white;
+    background-color: rgb(255, 139, 56);
+    transition: background 0.2s ease-in;
+}
+
+.equal-mode-3
+{
+    width: 115px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; 
+    height: 35px; 
+    color: black;
+    background-color: rgb(148, 255, 249);
+    transition: background 0.2s ease-in;
+}
+
+.equal-mode-2:hover
+{
+    background-color: rgb(235, 139, 56);
+}
+
+.equal-mode-3:hover
+{
+    background-color: rgb(48, 255, 249);
+}
+
+.equal:hover 
+{
+    color: white;
+    background-color: rgb(208, 0, 0);
+}
+

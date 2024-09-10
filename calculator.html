@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calculator">
+        <div id="top-bar">
+            <h1>Calc</h1>
+            <div class="theme">
+                <h6>THEME</h6>
+                <div class="controls">
+                    <div class="theme-numbers">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                    <div class="theme-btn" onclick="moveThemeBtn()"></div>
+                </div>
+            </div>
+        </div>
+        <div id="display">
+            <span id="display-value"></span>
+        </div>
+        <div class="buttons">
+            <div class="numbers-group">
+                <button class="btn"  onclick="getNumber(event)">7</button>
+                <button class="btn" onclick="getNumber(event)">8</button>
+                <button class="btn" onclick="getNumber(event)">9</button>
+                <button class="del" onclick="deleteCharacter(event)">DEL</button>
+            </div>
+            <div class="numbers-group">
+                <button class="btn" onclick="getNumber(event)">4</button>
+                <button class="btn" onclick="getNumber(event)">5</button>
+                <button class="btn" onclick="getNumber(event)">6</button>
+                <button class="btn" onclick="addition(event)">+</button>
+            </div>
+            <div class="numbers-group">
+                <button class="btn" onclick="getNumber(event)">1</button>
+                <button class="btn" onclick="getNumber(event)">2</button>
+                <button class="btn" onclick="getNumber(event)">3</button>
+                <button class="btn" onclick="soustraction()">-</button>
+            </div>
+            <div class="numbers-group">
+                <button class="btn" onclick="getNumber(event)">.</button>
+                <button class="btn" onclick="getNumber(event)">0</button>
+                <button class="btn" onclick="division(event)">/</button>
+                <button class="btn" onclick="multiply()">x</button>
+            </div>
+            <div class="numbers-group">
+                <button class="reset" onclick="resetCalculator()">RESET</button>
+                <button class="equal" onclick="getResult()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
